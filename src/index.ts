@@ -19,6 +19,8 @@ app.use(
   cookieSession({
     name: "mellon",
     keys: ["ftvAwddrv#46632gt%"],
+    secure: true,
+    sameSite: "none",
     maxAge: 24 * 60 * 60 * 1000,
   })
 );

@@ -6,10 +6,11 @@
     "rootDir": "src",
     "resolveJsonModule": true,
     "allowJs": true,
-    "outDir": "build",
+    "outDir": "./build",
     "esModuleInterop": true,
     "strict": true,
     "noImplicitAny": true,
     "skipLibCheck": true
-  }
+  },
+  "include": ["src/**/*"]
 }
