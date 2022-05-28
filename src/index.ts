@@ -18,7 +18,8 @@ app.use(express.json());
 app.use(
   cors({
     origin: `${process.env.FRONTEND_BASEURL}`,
-    methods: "GET,POST,PUT,DELETE,PATCH",
+    allowedHeaders: ["Content-Type", "Authorization"],
+    methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
     credentials: true,
   })
 );
@@ -27,7 +28,8 @@ app.use(
   cookieSession({
     name: "mellon",
     keys: ["ftvAwddrv#46632gt%"],
-    maxAge: 24 * 60 * 60 * 1000,
+    secure: false,
+    sameSite: false,
   })
 );
 
