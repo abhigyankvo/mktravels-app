@@ -13,28 +13,26 @@ const URI: string = process.env.URI as string;
 const port: string = process.env.PORT || "4000";
 
 const app = express();
-
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+app.use(
+  cors({
+    origin: `${process.env.FRONTEND_BASEURL}`,
+    methods: "GET,POST,PUT,DELETE,PATCH",
+    credentials: true,
+  })
+);
 //make the cookie
 app.use(
   cookieSession({
     name: "mellon",
     keys: ["ftvAwddrv#46632gt%"],
-    secure: true,
-    sameSite: "none",
     maxAge: 24 * 60 * 60 * 1000,
   })
 );
+
 app.use(passport.initialize());
 app.use(passport.session());
-app.use(
-  cors({
-    origin: `${process.env.FRONTEND_BASEURL}/`,
-    methods: "GET,POST,PUT,DELETE,PATCH",
-    credentials: true,
-  })
-);
-app.use(express.urlencoded({ extended: false }));
-app.use(express.json());
 
 const connectDB = async () => {
   try {

@@ -4,15 +4,6 @@ import User from "./models/userModel";
 import { IUser } from "./interfaces/interface";
 //check if any can be removed,
 //handle error being sent from ln:44
-passport.serializeUser((user: any, done) => {
-  done(null, user.id);
-});
-
-passport.deserializeUser((id, done) => {
-  User.findById(id).then((user) => {
-    done(null, user);
-  });
-});
 
 const GoogleStrategy = strategy.Strategy;
 passport.use(
@@ -48,3 +39,12 @@ passport.use(
     }
   )
 );
+passport.serializeUser((user: any, done) => {
+  done(null, user.id);
+});
+
+passport.deserializeUser((id, done) => {
+  User.findById(id).then((user) => {
+    done(null, user);
+  });
+});
