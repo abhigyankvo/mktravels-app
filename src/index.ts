@@ -28,8 +28,8 @@ app.use(
   cookieSession({
     name: "mellon",
     keys: ["ftvAwddrv#46632gt%"],
-    secure: false,
-    sameSite: false,
+    secure: true,
+    sameSite: "none",
   })
 );
 
