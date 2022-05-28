@@ -15,26 +15,28 @@ const port: string = process.env.PORT || "4000";
 const app = express();
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-app.use(
-  cors({
-    origin: `${process.env.FRONTEND_BASEURL}`,
-    allowedHeaders: ["Content-Type", "Authorization"],
-    methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
-    credentials: true,
-  })
-);
-//make the cookie
+app.set("trust proxy", 1);
 app.use(
   cookieSession({
     name: "mellon",
     keys: ["ftvAwddrv#46632gt%"],
     secure: true,
     sameSite: "none",
+    maxAge: 1000 * 60 * 60 * 24,
   })
 );
 
 app.use(passport.initialize());
 app.use(passport.session());
+
+app.use(
+  cors({
+    origin: `${process.env.FRONTEND_BASEURL}`,
+    methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
+    credentials: true,
+  })
+);
+//make the cookie
 
 const connectDB = async () => {
   try {
