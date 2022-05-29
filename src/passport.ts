@@ -9,6 +9,7 @@ const GoogleStrategy = strategy.Strategy;
 passport.use(
   new GoogleStrategy(
     {
+      proxy: true,
       clientID: process.env.GOOGLE_CLIENT_ID || "",
       clientSecret: process.env.GOOGLE_CLIENT_SECRET || "",
       callbackURL: `/auth/google/callback`,
