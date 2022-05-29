@@ -1,0 +1,36 @@
+/*
+  big = 64px
+  title = 36px
+  sub title 22px
+  button/navlinks = 16px
+  normal highlighted = 16px bold
+  small = 15px
+*/
+
+$purple: #741adb;
+$orange: #f59813;
+$gray: #e2ddfb;
+$purple-light: #8477d7;
+$red: rgb(228, 81, 81);
+$accent: #08825c;
+$primary-dark: #25262a;
+$primary: #fb8f1d;
+$big: 4rem;
+$title: 2.25rem;
+$subTitle: 1.375rem;
+$normal: 1rem;
+$small: 0.875rem;
+
+@mixin button-style($bg-color, $color, $border) {
+  @if ($border == none) {
+    border: none;
+  } @else {
+    border: 3px solid $border;
+  }
+  outline: none;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 0.8rem 2rem;
+  background-color: $bg-color;
+  color: $color;
+}

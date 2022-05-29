@@ -1,0 +1,88 @@
+@import "../../Util";
+@import url("https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css");
+//choose correct background image
+// body {
+//   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+//     url("../../assets/img/Hinterrhein.png");
+// }
+.hero {
+  color: white;
+  //add image here
+  background: black;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  height: 80vh;
+  width: 70vw;
+  border-radius: 50px;
+  margin: 10vh auto 10vh auto;
+}
+
+// Navigation bar css
+.heroNav {
+  background-color: $purple;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: calc(100% - 30px);
+  width: 80px;
+  border-radius: 35px;
+  margin-left: 15px;
+  padding: 25px 0;
+  .navLogo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: $purple;
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+  }
+  .navLinks {
+    li {
+      margin-bottom: 15px;
+    }
+  }
+  .navLogo,
+  .navProfile {
+    p {
+      font-weight: 500;
+    }
+  }
+}
+
+// Hero content css
+.heroContent {
+  flex: 1;
+  padding: 0 2rem;
+  h1 {
+    margin-bottom: 10px;
+  }
+  p {
+    margin-bottom: 15px;
+  }
+  button {
+    outline: none;
+    border: none;
+    background: transparent;
+    color: white;
+    font-weight: bold;
+  }
+  button::before {
+    content: "";
+    background: white;
+    display: inline-block;
+    position: relative;
+    top: -3px;
+    margin-right: 15px;
+    width: 30px;
+    height: 1px;
+  }
+}
+.heroImg {
+  flex: 1.5;
+  height: 100%;
+  background: url("../../assets/img/Hero-2.png") center/contain no-repeat;
+}

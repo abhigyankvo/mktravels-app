@@ -1,0 +1,202 @@
+@import "../../Util";
+.rideform-container {
+  // border: 2px solid red;
+  margin: 10vh auto 10vh auto;
+  min-height: 80vh;
+  // height: Max(80vh, 100%);
+  width: 70vw;
+  border-radius: 50px;
+  overflow: hidden;
+  display: flex;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+.logo {
+  // border: 1px solid black;
+  background: url("../../assets/img/Logo.png") center/contain no-repeat;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  transform: rotate(-45deg);
+  margin-bottom: 10px;
+}
+.rideform-left-container {
+  //  border: 2px solid green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+
+  label {
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    display: block;
+    font-size: 0.9rem;
+  }
+  //input in focus
+  input[type="text"] {
+    // background-color: blue;
+    color: rgb(49, 49, 49);
+    letter-spacing: 1.3px;
+    font-size: 0.8rem;
+    font-family: "Nunito", sans-serif;
+    width: 280px;
+    padding: 5px 5px 5px 0;
+    outline: none;
+    border: none;
+    border-bottom: 1.5px solid rgb(155, 155, 155);
+  }
+  input[type="text"]:focus,
+  input[type="text"]:hover {
+    border-bottom: 1.5px solid $purple;
+    color: $purple;
+  }
+}
+#origin-div,
+#destination-div {
+  // border: 2px solid blue;
+  position: relative;
+}
+.rideform-left {
+  //border: 2px solid blue;
+  h2::after {
+    content: "";
+    display: block;
+    width: 40%;
+    height: 2px;
+    background-color: $purple;
+    margin-top: 5px;
+  }
+  position: relative;
+  & > * {
+    margin-bottom: 15px;
+  }
+}
+.rideform-right-container {
+  flex: 1.5;
+  // border: 2px solid blue;
+  background: url("../../assets/img/Cab.png") center/cover no-repeat;
+}
+#radio-div {
+  display: flex;
+  column-gap: 30px;
+  input[type="radio"] {
+    display: none;
+  }
+  .radiolabel {
+    border: 2px solid rgb(90, 90, 90);
+    // border-radius: 50px;
+    width: max-content;
+    cursor: pointer;
+    padding: 0.3rem 0.5rem;
+  }
+  .checked + label {
+    border: 2px solid $purple;
+    background-color: $purple;
+    color: white;
+  }
+}
+#passenger-div {
+  display: flex;
+  align-items: center;
+}
+.user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgb(90, 90, 90);
+  width: 25px;
+  height: 25px;
+}
+.userChange:hover {
+  cursor: pointer;
+  border: none;
+  background-color: $purple;
+  .minus,
+  .plus {
+    fill: white;
+  }
+}
+.userChangeDisabled {
+  cursor: not-allowed;
+  border: none;
+  background-color: gray;
+  // border: 2px solid gray;
+  .minus,
+  .plus {
+    fill: white;
+  }
+}
+.minus,
+.plus {
+  fill: rgb(90, 90, 90);
+  width: 0.7rem;
+  height: 0.7rem;
+}
+.users-alt {
+  margin-right: 8px;
+  fill: rgb(58, 58, 58);
+  width: 1.3rem;
+  height: 1.3rem;
+}
+.navigation-container {
+  // border: 1px solid red;
+
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.input-container {
+  // border: 1px solid red;
+  width: 280px;
+  position: relative;
+  .suggestion-container {
+    position: absolute;
+    z-index: 2;
+    background-color: white;
+    // border: 1px solid $purple;
+    width: 100%;
+    .suggestion-item {
+      padding: 5px;
+      cursor: pointer;
+      color: black;
+      border: 1px solid gray;
+      border-top: none;
+      min-height: 30px;
+    }
+    .suggestion-item:hover {
+      background-color: #e2d1f75d;
+      color: $purple;
+    }
+  }
+}
+//.suggestion-container {
+// overflow-y: scroll;
+// scrollbar-color: #6969dd #e0e0e0;
+// scrollbar-width: auto;
+// height: 200px;
+// border: 1px solid gray;
+// margin-top: 5px;
+// z-index: 2;
+// position: absolute;
+// background-color: white;
+//}
+// .suggestion-container::-webkit-scrollbar {
+//   width: 7px;
+// }
+// .suggestion-container::-webkit-scrollbar-track {
+//   background-color: #e0e0e0;
+// }
+// .suggestion-container::-webkit-scrollbar-thumb {
+//   border-radius: 20px;
+//   background-color: #6969dd;
+// }
+// .suggestion-item {
+//   padding: 5px 3px 5px 3px;
+//   border-bottom: 0.1px solid rgb(199, 199, 199);
+//   // border-top: 0.5px solid gray;
+// }
+// .suggestion-item:hover {
+//   cursor: pointer;
+//   background-color: rgb(240, 240, 240);
+// }

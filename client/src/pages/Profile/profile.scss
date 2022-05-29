@@ -1,0 +1,140 @@
+@import "../../Util";
+.profile {
+  //border: 2px solid red;
+  margin: 10vh auto 10vh auto;
+  height: 80vh;
+  // height: Max(80vh, 100%);
+  width: 70vw;
+  border-radius: 50px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  //   justify-content: center;
+  //   align-items: center;
+  //   & * {
+  //     border: 1px solid red;
+  //   }
+  //   background-color: #e2d1f75d;
+}
+
+.profile-top {
+  background-color: #e2d1f75d;
+  border: none;
+  height: 15%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+.profile-details {
+  display: flex;
+  justify-content: center;
+  height: 20%;
+  .pf-img {
+    margin-right: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      height: 100px;
+      width: 100px;
+      border-radius: 50%;
+    }
+  }
+  .pf-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+}
+
+.profile-rides {
+  height: 65%;
+  width: 70%;
+  margin: 0 auto;
+  .ride-sections {
+    border: 1px solid $purple;
+    display: flex;
+    justify-content: space-around;
+
+    .upcoming,
+    .completed {
+      font-size: 1.1rem;
+      padding: 4px 0;
+      flex: 1;
+    }
+    .upcoming:hover,
+    .completed:hover {
+      color: $purple;
+      cursor: pointer;
+    }
+    .active,
+    .active:hover {
+      background-color: $purple;
+      color: white;
+    }
+  }
+}
+.scroll-rides {
+  //   border: 1px solid red;
+  margin-bottom: 20px;
+  height: 88%;
+  overflow-y: scroll;
+}
+.pf-rides {
+  border: 1px solid $purple;
+  //   background-color: #e2d1f75d;
+  & > div {
+    display: flex;
+    align-items: center;
+  }
+  margin: 10px 0;
+  padding: 10px 10px;
+  border-radius: 5px;
+  display: grid;
+  grid-template-areas:
+    "aa bb ee"
+    "cc dd ee";
+  row-gap: 10px;
+}
+.calendar,
+.users,
+.clock {
+  height: 16px;
+  width: 16px;
+  margin-right: 10px;
+}
+.aa {
+  grid-area: aa;
+}
+.bb {
+  grid-area: bb;
+}
+.cc {
+  grid-area: cc;
+}
+.dd {
+  grid-area: dd;
+}
+.ee {
+  grid-area: ee;
+  justify-content: flex-end;
+}
+
+.red-btn {
+  font-weight: 600;
+  margin: 0 15px;
+  color: $red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  height: 40px;
+  width: 100px;
+  border: 2px solid $red;
+}
+.red-btn:hover {
+  cursor: pointer;
+  background-color: $red;
+  color: white;
+}

@@ -1,0 +1,56 @@
+@import "../../Util";
+.success-container {
+  //border: 2px solid red;
+  margin: 10vh auto 10vh auto;
+  min-height: 80vh;
+  // height: Max(80vh, 100%);
+  width: 70vw;
+  border-radius: 50px;
+  overflow: hidden;
+  display: flex;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  //   & * {
+  //     border: 1px solid red;
+  //   }
+}
+.buttons {
+  display: flex;
+}
+.success {
+  // border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  & > * {
+    margin-bottom: 15px;
+  }
+  p {
+    text-align: center;
+    width: 60%;
+  }
+}
+// .buttons {
+//   border: 1px solid red;
+// }
+.success-btn {
+  margin: 0 15px;
+  color: $purple;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  height: 40px;
+  width: 100px;
+  border: 2px solid $purple;
+}
+.success-btn:hover {
+  cursor: pointer;
+  background-color: $purple;
+  color: white;
+}
+
+// .tick {
+//   border: 1px solid green;
+// }

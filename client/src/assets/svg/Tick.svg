@@ -1,0 +1,5 @@
+<svg className="tick" width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="90" cy="90" r="90" fill="#31CF2E" fill-opacity="0.65"/>
+<rect x="46.0898" y="90.024" width="15" height="51.7815" transform="rotate(-48.6976 46.0898 90.024)" fill="white"/>
+<rect x="133.403" y="46.1817" width="15" height="90" transform="rotate(41.3024 133.403 46.1817)" fill="white"/>
+</svg>

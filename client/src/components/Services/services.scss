@@ -1,0 +1,201 @@
+@import "../../Util";
+//set proper font weight in util or index.css
+.services {
+  color: white;
+  //add image here
+  background: black;
+  overflow: hidden;
+  display: flex;
+  height: 85vh;
+  width: 70vw;
+  border-radius: 50px;
+  margin: 10vh auto 10vh auto;
+  padding: 15px;
+}
+
+.servicesContent {
+  position: relative;
+  flex: 1.2;
+  div {
+    width: 70%;
+    margin: 20% 0 0 10%;
+    h1 {
+      margin-bottom: 20px;
+    }
+    h1::after {
+      content: "";
+      display: block;
+      width: 40%;
+      height: 1px;
+      background-color: $orange;
+    }
+    h3 {
+      margin-bottom: 5px;
+    }
+  }
+}
+.servicesCat {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "one two"
+    "three four";
+  .cat {
+    // display: flex;
+    // align-items: flex-end;
+    overflow: hidden;
+    position: relative;
+    color: white;
+  }
+  .item {
+    width: 80%;
+    height: max-content;
+    // border: 1px solid red;
+    position: absolute;
+    bottom: 20px;
+    left: 10%;
+
+    h2 {
+      margin-bottom: 5px;
+    }
+  }
+}
+.one {
+  grid-area: one;
+  border-top-left-radius: 40px;
+  background-color: $purple;
+}
+.two {
+  grid-area: two;
+  border-top-right-radius: 40px;
+  background-color: $orange;
+}
+.three {
+  grid-area: three;
+  border-bottom-left-radius: 40px;
+  background-color: $gray;
+  .item {
+    color: $purple;
+  }
+}
+.four {
+  grid-area: four;
+  border-bottom-right-radius: 40px;
+  background-color: $purple-light;
+}
+
+.float0 {
+  & > * {
+    position: absolute;
+  }
+  .curve3 {
+    bottom: 40px;
+    right: 60px;
+    transform: rotate(-10deg);
+    stroke: white;
+    stroke-width: 0.5px;
+  }
+  .orange-circle {
+    bottom: 40px;
+    right: 80px;
+    height: 40px;
+    width: 40px;
+  }
+  .purple-circle {
+    bottom: 150px;
+    right: 120px;
+    height: 30px;
+    width: 30px;
+  }
+  .orange-line {
+    bottom: 140px;
+    right: 120px;
+    transform: rotate(30deg);
+    rect {
+      width: 70%;
+    }
+  }
+  .purpleL-line {
+    bottom: 100px;
+    right: 80px;
+    transform: rotate(-10deg);
+    rect {
+      width: 50%;
+    }
+  }
+}
+
+.float1 {
+  & > * {
+    position: absolute;
+  }
+  .curve {
+    top: 40px;
+    left: -20px;
+    transform: rotate(-30deg) scale(1.5);
+    stroke: $gray;
+    stroke-width: 0.5px;
+  }
+  .gray-line {
+    top: 100px;
+    left: -20px;
+    transform: rotate(10deg) scale(0.6);
+  }
+  .orange-line {
+    top: 30px;
+    left: 80px;
+    transform: rotate(45deg) scale(0.7);
+  }
+}
+.float2 {
+  & > * {
+    position: absolute;
+  }
+  .gray-circle {
+    top: 40px;
+    left: 50px;
+    height: 40px;
+    width: 40px;
+  }
+  .gray-line {
+    top: 100px;
+    left: 30px;
+    transform: rotate(10deg);
+    rect {
+      width: 70%;
+    }
+  }
+  .purpleL-line {
+    top: 120px;
+    left: 80px;
+    transform: rotate(-10deg);
+    rect {
+      width: 50%;
+    }
+  }
+}
+.float3 {
+  & > * {
+    position: absolute;
+  }
+  .curve3 {
+    top: 40px;
+    left: -20px;
+    transform: rotate(-210deg) scale(1.5);
+    stroke: #491ec4;
+    stroke-width: 0.5px;
+  }
+  .orange-circle {
+    top: 40px;
+    left: 95px;
+    height: 15px;
+    width: 15px;
+  }
+  .purple-circle {
+    top: 55px;
+    left: 30px;
+    height: 40px;
+    width: 40px;
+  }
+}
