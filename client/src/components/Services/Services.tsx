@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import "./services.scss";
-import { EventType } from "../../interfaces";
 import { ReactComponent as Curve3 } from "../../assets/svg/curve3.svg";
 import { ReactComponent as Purple } from "../../assets/svg/purple-circle.svg";
 import { ReactComponent as Gray } from "../../assets/svg/gray-circle.svg";

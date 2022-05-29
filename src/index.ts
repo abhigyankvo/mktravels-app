@@ -15,7 +15,7 @@ const port: string = process.env.PORT || "4000";
 const app = express();
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-app.set("trust proxy", 1);
+// app.set("trust proxy", 1);
 app.use(
   cookieSession({
     name: "mellon",

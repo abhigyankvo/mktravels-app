@@ -5,7 +5,6 @@ export { default as PersonalForm } from "./Personal/Personal";
 export { default as RideForm } from "./Ride/Ride";
 export { default as ConfirmPage } from "./Confirm/Confirm";
 export { default as Login } from "./Login/Login";
-export { default as Suggestions } from "./Suggestions/Suggestions";
 
 export {
   NextButton,
