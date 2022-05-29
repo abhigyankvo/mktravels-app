@@ -12,7 +12,7 @@ authRoute.get(
 authRoute.get(
   "/google/callback",
   passport.authenticate("google", {
-    successRedirect: `${process.env.FRONTEND_BASEURL}/login`,
+    successRedirect: `/login`,
     failureRedirect: "/auth/login/failed",
   })
 );
@@ -45,7 +45,7 @@ authRoute.get("/login/failed", (req, res) => {
 authRoute.get("/logout", (req, res) => {
   console.log("logged out");
   req.logout();
-  res.redirect(`${process.env.FRONTEND_BASEURL}`);
+  res.redirect(`/`);
 });
 
 authRoute.post("/addride", isLoggedIn, async (req, res) => {
@@ -108,6 +108,6 @@ function isLoggedIn(
     console.log("isLoggedin called");
     return next();
   }
-  res.redirect(`${process.env.FRONTEND_BASEURL}/login`);
+  res.redirect(`/login`);
 }
 export default authRoute;
